@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mariana Nobre | Advocacia e Recuperação de Ativos em SP</title>
+    <meta name="description"
+        content="Boutique de inteligência jurídica e financeira em São Paulo. Especialistas em recuperação de ativos, precatórios e direito público com foco em resultado.">
+    <link rel="canonical" href="https://mariananobre.com.br/" />
+    <!-- Open Graph / Redes Sociais -->
+    <meta property="og:title" content="Mariana Nobre | Advocacia e Recuperação de Ativos em SP">
+    <meta property="og:description"
+        content="Boutique de inteligência jurídica e financeira em São Paulo. Especialistas em recuperação de ativos, precatórios e direito público com foco em resultado.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mariananobre.com.br/">
+    <meta property="og:image" content="https://mariananobre.com.br/imagens/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mariana Nobre | Advocacia e Recuperação de Ativos em SP">
+    <meta name="twitter:description" content="Boutique de inteligência jurídica e financeira em São Paulo. Especialistas em recuperação de ativos, precatórios e direito público com foco em resultado.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:wght@400&display=swap" rel="stylesheet">
+
+    <!-- Schema.org JSON-LD para Google e IAs -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LegalService",
+      "name": "Mariana Nobre Sociedade de Advocacia",
+      "description": "Boutique de inteligência jurídica e financeira. Especializada em recuperação de ativos, precatórios e compliance.",
+      "url": "https://mariananobre.com.br/",
+      "logo": "https://mariananobre.com.br/imagens/logo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "São Paulo",
+        "addressRegion": "SP",
+        "addressCountry": "BR"
+      },
+      "telephone": "+5511963986278",
+      "email": "mariana@mariananobre.com.br",
+      "priceRange": "$$$",
+      "sameAs": [
+        "https://www.linkedin.com/company/mariana-nobre-advocacia"
+      ]
+    }
+    </script>
+    <style>
+        /* RESET & BASE */
+        :root {
+            --primary: #0d4250;
+            --primary-light: #155b6b;
+            --bg-dark: #0d4250;
+            --bg-medium: #111111;
+            --bg-light: #f4f7f8;
+            --text-main: #2c3e50;
+            --text-light: #ffffff;
+            --accent: #c09e6c;
+            --border: #d1dce0;
+            --success-color: #28a745;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Libre Bodoni', Georgia, serif;
+            font-weight: 400;
+            letter-spacing: 0.01em;
+            margin-bottom: 1rem;
+            line-height: 1.25;
+        }
+
+        h1 {
+            font-size: 4rem;
+            font-weight: 400;
+            line-height: 1.1;
+            color: var(--text-light);
+        }
+
+        h2 {
+            font-size: 2.3rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--primary);
+            margin-bottom: 3.5rem;
+            position: relative;
+            display: inline-block;
+            font-weight: 400;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background-color: var(--accent);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+            color: #445566;
+            max-width: 70ch;
+        }
+
+        /* UTILS */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 16px 45px;
+            background-color: var(--primary);
+            color: #fff;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+            border: 1px solid var(--primary);
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--accent);
+            color: #fff;
+            border-color: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(192, 158, 108, 0.25);
+        }
+
+        .section-padding {
+            padding: 110px 0;
+        }
+
+        /* HEADER */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.98);
+            border-bottom: 1px solid #f0f0f0;
+            padding: 15px 0;
+            transition: 0.4s ease;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-img {
+            height: 60px;
+            width: auto;
+            display: block;
+        }
+
+        .logo-text {
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: var(--primary);
+            display: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 35px;
+        }
+
+        .nav-links a {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: var(--primary);
+            font-weight: 600;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--primary);
+            cursor: pointer;
+            padding: 8px;
+            z-index: 1001;
+        }
+
+        .mobile-menu-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100vh;
+            background-color: var(--bg-dark);
+            z-index: 2000;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+        }
+
+        .mobile-menu-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .close-mobile-menu {
+            position: absolute;
+            top: 20px; right: 25px;
+            font-size: 3.5rem;
+            color: rgba(255,255,255,0.7);
+            cursor: pointer;
+            transition: color 0.3s;
+            line-height: 1;
+        }
+
+        .close-mobile-menu:hover {
+            color: var(--accent);
+        }
+
+        .mobile-nav-links {
+            text-align: center;
+        }
+
+        .mobile-nav-links li {
+            margin-bottom: 35px;
+        }
+
+        .mobile-nav-links a {
+            color: #fff;
+            font-size: 2.2rem;
+            font-family: 'Libre Bodoni', serif;
+            transition: color 0.3s;
+            text-transform: none;
+            display: inline-block;
+            padding: 10px;
+        }
+
+        .mobile-nav-links a:hover {
+            color: var(--accent);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            height: 100vh;
+            background-image: linear-gradient(rgba(13, 66, 80, 0.75), rgba(13, 66, 80, 0.4)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            color: #fff;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.25rem;
+            max-width: 650px;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+        }
+
+        .hero .btn {
+            background-color: #fff;
+            color: var(--primary);
+            border: 1px solid #fff;
+        }
+
+        .hero .btn:hover {
+            background-color: var(--accent);
+            color: #fff;
+            border-color: var(--accent);
+            box-shadow: 0 10px 20px rgba(192, 158, 108, 0.4);
+        }
+
+        /* DIFFERENTIALS (SOBRE) */
+        .differentials {
+            background-color: var(--primary);
+            color: #fff;
+        }
+
+        .diff-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+            justify-content: center;
+        }
+
+        .diff-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 18px;
+            color: #fff;
+            border-left: 3px solid rgba(255, 255, 255, 0.3);
+            padding-left: 20px;
+            font-weight: 600;
+        }
+
+        .diff-item p {
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        /* SERVICES */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: #fff;
+            padding: 50px 40px;
+            border: 1px solid transparent;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+            border-radius: 4px;
+            transition: all 0.5s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background-color: var(--accent);
+            transform: scaleX(0);
+            transition: transform 0.5s ease;
+            transform-origin: left;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(13, 66, 80, 0.06);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 22px;
+            color: var(--primary);
+            font-weight: 400;
+        }
+
+        .service-card p {
+            font-size: 0.95rem;
+            color: #556677;
+        }
+
+        /* TEAM */
+        .team {
+            background-color: var(--bg-light);
+        }
+
+        .team-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 60px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .team-card {
+            flex: 1 1 380px;
+            max-width: 480px;
+            background: #fff;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            transition: all 0.4s ease;
+            border: 1px solid #f0f0f0;
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 60px rgba(13, 66, 80, 0.08);
+            border-color: var(--primary);
+        }
+
+        .member-info {
+            padding: 35px;
+            text-align: center;
+        }
+
+        .member-role {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: var(--primary-light);
+            margin-bottom: 12px;
+            display: block;
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+
+        .member-info h3 {
+            color: var(--primary);
+            font-weight: 400;
+            margin-bottom: 20px;
+            font-size: 1.6rem;
+        }
+
+        .member-bio {
+            font-size: 0.95rem;
+            color: #556677;
+            margin-top: 15px;
+            line-height: 1.7;
+            text-align: left;
+        }
+
+        .member-img {
+            height: 480px;
+            width: 100%;
+            background-color: #eee;
+            background-size: cover;
+            background-position: center top;
+            transition: 0.5s ease;
+        }
+
+        /* CONTACT FORM */
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 80px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #e1e8eb;
+            background-color: #fcfdfe;
+            font-family: inherit;
+            font-size: 1rem;
+            color: var(--text-main);
+            outline: none;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: var(--primary);
+            background-color: #fff;
+            box-shadow: 0 0 0 4px rgba(13, 66, 80, 0.05);
+        }
+
+        .contact-info div {
+            margin-bottom: 45px;
+        }
+
+        .contact-info h4 {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: var(--primary-light);
+            margin-bottom: 12px;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+        }
+
+        .contact-info p {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin: 0;
+            font-weight: 300;
+        }
+
+        /* LGPD BANNER */
+        #cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: var(--primary);
+            color: #fff;
+            padding: 25px;
+            display: none;
+            z-index: 9999;
+            box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .cookie-btn {
+            padding: 12px 35px;
+            background-color: #fff;
+            color: var(--primary);
+            border: none;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+        .cookie-btn-outline {
+            background-color: transparent;
+            color: #fff;
+            border: 1px solid rgba(255,255,255,.5);
+        }
+        .cookie-btn-outline:hover {
+            background-color: rgba(255,255,255,.1);
+            border-color: #fff;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #082d36;
+            color: rgba(255, 255, 255, 0.4);
+            padding: 60px 0;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        footer p {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            margin-top: 20px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.6);
+            display: inline-block;
+            padding: 12px 15px;
+            margin: 0 5px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        /* MODALS (PRIVACIDADE E SUCESSO) */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            z-index: 10000;
+            display: none;
+            /* Crucial: deve ser display:none */
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .modal-content {
+            background: #fff;
+            width: 100%;
+            max-width: 800px;
+            max-height: 85vh;
+            overflow-y: auto;
+            padding: 50px;
+            position: relative;
+            color: var(--text-main);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Estilo específico para o modal de sucesso (menor) */
+        #success-modal .modal-content {
+            max-width: 500px;
+            text-align: center;
+            padding: 60px 40px;
+        }
+
+        .modal-content h2 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 25px;
+            display: block;
+            width: fit-content;
+        }
+
+        /* Centraliza o título no modal de sucesso */
+        #success-modal .modal-content h2 {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        #success-modal .modal-content h2::after {
+            margin: 10px auto 0 auto;
+            /* Centraliza a linha */
+        }
+
+        .modal-content h2::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 3px;
+            background-color: var(--primary);
+            margin-top: 10px;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            font-size: 2.5rem;
+            cursor: pointer;
+            color: #ccc;
+            line-height: 1;
+        }
+
+        .close-modal:hover {
+            color: var(--primary);
+        }
+
+        .policy-text p {
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            color: #556677;
+        }
+
+        /* FADE IN ANIMATION */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* MOBILE RESPONSIVE */
+        @media (max-width: 992px) {
+            .contact-layout {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+
+            h1 {
+                font-size: 2.8rem;
+            }
+
+            .modal-content {
+                padding: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .section-padding {
+                padding: 70px 0;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .team-card {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+
+            .member-img {
+                height: 420px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header id="header">
+        <div class="container">
+            <nav>
+                <div class="logo-container">
+                    <img src="imagens/logo.png" alt="MN Sociedade de Advocacia" class="logo-img"
+                        onerror="this.style.display='none'; document.getElementById('logo-text').style.display='block';">
+                    <div id="logo-text" class="logo-text">MARIANA NOBRE</div>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="#sobre">O Escritório</a></li>
+                    <li><a href="#atuacao">Atuação</a></li>
+                    <li><a href="#equipe">Sócios</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+
+                <button class="mobile-menu-btn" aria-label="Abrir menu" onclick="toggleMobileMenu()">
+                    <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container hero-content fade-in">
+            <h1>
+                <span class="sr-only">Advocacia Especializada em Recuperação de Ativos. </span>
+                Inteligência Jurídica.<br>Foco em Resultados.
+            </h1>
+            <p>Aliamos a precisão técnica do Direito à visão estratégica financeira para maximizar a recuperação de
+                ativos.</p>
+            <a href="#contato" class="btn">Solicitar Análise Estratégica</a>
+        </div>
+    </section>
+
+    <!-- SOBRE / DIFERENCIAIS -->
+    <section id="sobre" class="section-padding differentials">
+        <div class="container">
+            <div class="diff-grid">
+                <div class="diff-item fade-in">
+                    <h3>Visão Financeira</h3>
+                    <p>Atuamos com a inteligência de fundos de investimento. Entendemos que o sucesso jurídico deve ser
+                        acompanhado de liquidez e retorno financeiro real.</p>
+                </div>
+                <div class="diff-item fade-in">
+                    <h3>Engenharia Jurídica</h3>
+                    <p>Atuamos no vácuo entre a advocacia de massa e as gestoras de ativos. Estruturamos operações
+                        complexas com base técnica sólida e multidisciplinar.</p>
+                </div>
+                <div class="diff-item fade-in">
+                    <h3>Experiência de Mercado</h3>
+                    <p>Nossa equipe traz o DNA de grandes gestoras de ativos (Special Situations), traduzindo
+                        complexidade jurídica em oportunidades de negócio.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ATUAÇÃO -->
+    <section id="atuacao" class="section-padding">
+        <div class="container">
+            <h2 class="fade-in">Nossa Atuação</h2>
+            <div class="services-grid fade-in">
+                <div class="service-card">
+                    <h3>Recuperação de Créditos</h3>
+                    <p>Estratégias personalizadas para cobrança de títulos de alta complexidade, focando na localização
+                        de bens e desvio de patrimônio.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Ativos Judiciais</h3>
+                    <p>Avaliação e estruturação de carteiras de precatórios e direitos creditórios para investidores
+                        institucionais e privados.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Compliance & Gestão de Risco</h3>
+                    <p>Análise de solvência e risco em operações de aquisição de ativos estressados (Distressed Assets)
+                        e incidentes de desconsideração da personalidade jurídica.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EQUIPE -->
+    <section id="equipe" class="section-padding team">
+        <div class="container">
+            <h2 class="fade-in">Liderança</h2>
+            <div class="team-grid">
+                <!-- Mariana Nobre -->
+                <div class="team-card fade-in">
+                    <div class="member-img" style="background-image: url('imagens/mariana.jpg');" role="img"
+                        aria-label="Foto de Mariana Nobre, Sócia Fundadora"></div>
+                    <div class="member-info">
+                        <span class="member-role">Sócia Fundadora</span>
+                        <h3>Mariana Nobre</h3>
+                        <div class="member-bio">
+                            <p>Diretora Jurídica da Limão Investimentos. Durante mais de uma década trabalhou para
+                                renomados escritórios em recuperação de ativos.</p>
+                            <p>Graduada pela PUCSP, Especialização em Processo Civil e Contratos pela FGV,
+                                Especialização em Direito Ambiental pela PUCSP, Especialização em Direito Imobiliário
+                                pela FMU.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- Akysa Santana -->
+                <div class="team-card fade-in">
+                    <div class="member-img" style="background-image: url('imagens/akysa.jpg');" role="img"
+                        aria-label="Foto de Akysa Santana, Advogada Associada"></div>
+                    <div class="member-info">
+                        <span class="member-role">Advogada Associada</span>
+                        <h3>Akysa Santana</h3>
+                        <div class="member-bio">
+                            <p>Coordenadora Jurídica com experiência em contencioso cível e empresarial estratégico.</p>
+                            <p>Graduada pela UNESP, é membro da Comissão de Direito Imobiliário da OAB/SP e participante
+                                do Aspire Leaders Program da Harvard Business School.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="section-padding">
+        <div class="container">
+            <div class="contact-layout fade-in">
+                <div class="contact-form-wrapper">
+                    <h2>Entre em Contato</h2>
+                    <p>Inicie um diálogo estratégico sobre o seu caso.</p>
+
+                    <form id="contact-form" name="contato" method="POST" data-netlify="true">
+                        <input type="hidden" name="form-name" value="contato" />
+                        <div class="form-group">
+                            <label for="nome">Nome ou Empresa</label>
+                            <input type="text" id="nome" name="nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail Corporativo</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensagem">Como podemos ajudar?</label>
+                            <textarea id="mensagem" name="mensagem" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Enviar Mensagem</button>
+                    </form>
+                </div>
+
+                <div class="contact-info">
+                    <div>
+                        <h4>Endereço</h4>
+                        <p>São Paulo, SP</p>
+                    </div>
+                    <div>
+                        <h4>Atendimento</h4>
+                        <p><a href="mailto:mariana@mariananobre.com.br">mariana@mariananobre.com.br</a></p>
+                    </div>
+                    <div>
+                        <h4>WhatsApp</h4>
+                        <p>(11) 96398-6278</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="logo-container" style="justify-content: center; margin-bottom: 30px;">
+                <img src="imagens/logo-footer.png" alt="Logo MN" style="height: 80px; width: auto; opacity: 0.8;">
+            </div>
+            <p>&copy; 2026 Mariana Nobre Sociedade de Advocacia. Todos os direitos reservados.</p>
+            <div class="footer-links" style="margin-top: 25px;">
+                <a onclick="openModal('privacy-modal')" style="cursor: pointer; text-decoration: underline;">Política de
+                    Privacidade</a>
+                <span style="margin: 0 10px; opacity: 0.3;">|</span>
+                <a href="/auditoria" style="opacity: 0.5; text-decoration: none;">Área Restrita</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BANNER LGPD -->
+    <div id="cookie-banner">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                Valorizamos sua privacidade. Este site utiliza apenas cookies essenciais para o seu funcionamento e não coleta dados para publicidade ou rastreamento.
+                Saiba mais em nossa <a onclick="openModal('privacy-modal')"
+                    style="cursor: pointer; text-decoration: underline; color: #fff;">Política de Privacidade</a>.
+            </div>
+            <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                <button id="reject-cookies" class="cookie-btn cookie-btn-outline">Rejeitar</button>
+                <button id="accept-cookies" class="cookie-btn">Concordar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MOBILE MENU OVERLAY -->
+    <div id="mobile-menu-overlay" class="mobile-menu-overlay">
+        <span class="close-mobile-menu" onclick="toggleMobileMenu()" aria-label="Fechar menu">&times;</span>
+        <ul class="mobile-nav-links">
+            <li><a href="#sobre" onclick="toggleMobileMenu()">O Escritório</a></li>
+            <li><a href="#atuacao" onclick="toggleMobileMenu()">Atuação</a></li>
+            <li><a href="#equipe" onclick="toggleMobileMenu()">Sócios</a></li>
+            <li><a href="#contato" onclick="toggleMobileMenu()">Contato</a></li>
+        </ul>
+    </div>
+
+    <!-- MODAL PRIVACIDADE -->
+    <div id="privacy-modal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('privacy-modal')">&times;</span>
+            <h2>Política de Privacidade</h2>
+            <div class="policy-text">
+                <p><em>Última atualização: 29 de Janeiro de 2026</em></p>
+                <p>A presente Política de Privacidade descreve como a <strong>Mariana Nobre Sociedade de
+                        Advocacia</strong> coleta e trata seus dados pessoais, em conformidade com a Lei Geral de
+                    Proteção de Dados (Lei n.º 13.709/2018).</p>
+
+                <p><strong>1. Controlador dos Dados:</strong> A Mariana Nobre Sociedade de Advocacia é a controladora
+                    dos dados pessoais coletados neste site.</p>
+
+                <p><strong>2. Dados Coletados:</strong> Coletamos apenas as informações estritamente necessárias
+                    fornecidas por você através do nosso formulário de contato: <strong>Nome, E-mail e conteúdo da
+                        Mensagem.</strong></p>
+
+                <p><strong>3. Finalidade:</strong> Seus dados são utilizados exclusivamente para responder à sua
+                    solicitação, enviar propostas de serviços e estabelecer contato profissional.</p>
+
+                <p><strong>4. Compartilhamento:</strong> Não vendemos, alugamos ou compartilhamos seus dados pessoais
+                    com terceiros para fins comerciais. Seus dados são mantidos em sigilo.</p>
+
+                <p><strong>5. Segurança:</strong> Adotamos medidas técnicas adequadas para proteger seus dados contra
+                    acessos não autorizados e situações acidentais.</p>
+
+                <p><strong>6. Seus Direitos:</strong> Conforme a LGPD, você tem o direito de confirmar a existência de
+                    tratamento, acessar seus dados, corrigir informações incompletas ou solicitar a exclusão de seus
+                    dados a qualquer momento enviando um e-mail para <strong>mariana@mariananobre.com.br</strong>.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL SUCESSO -->
+    <div id="success-modal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('success-modal')">&times;</span>
+            <h2>Mensagem Enviada!</h2>
+            <div class="policy-text" style="color: #445566;">
+                <p style="font-size: 1.1rem; line-height: 1.6;">Recebemos sua mensagem.<br>Entraremos em contato em
+                    breve para prosseguir com o atendimento.</p>
+                <button class="btn" onclick="closeModal('success-modal')" style="margin-top: 20px;">Fechar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.style.padding = '10px 0';
+                header.style.boxShadow = '0 10px 30px rgba(0,0,0,0.05)';
+            } else {
+                header.style.padding = '15px 0';
+                header.style.boxShadow = 'none';
+            }
+        });
+
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const formData = new FormData(contactForm);
+                fetch("/", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                    body: new URLSearchParams(formData).toString(),
+                })
+                    .then(() => {
+                        // Limpa o formulário e abre o modal de sucesso
+                        contactForm.reset();
+                        openModal('success-modal');
+                    })
+                    .catch(() => {
+                        alert("Ocorreu um erro. Por favor, tente novamente.");
+                    });
+            });
+        }
+
+        const banner = document.getElementById('cookie-banner');
+        if (!localStorage.getItem('mn-lgpd-accept')) {
+            setTimeout(() => banner.style.display = 'block', 1500);
+        }
+        function fecharBanner() {
+            localStorage.setItem('mn-lgpd-accept', 'true');
+            banner.style.display = 'none';
+        }
+        document.getElementById('accept-cookies').onclick = fecharBanner;
+        document.getElementById('reject-cookies').onclick = fecharBanner;
+
+        // Modal Logic Genérico para Múltiplos Modais
+        function openModal(modalId) {
+            const m = document.getElementById(modalId);
+            if (m) {
+                m.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            }
+        }
+        function closeModal(modalId) {
+            const m = document.getElementById(modalId);
+            if (m) {
+                m.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Fecha qualquer modal ao clicar fora
+        window.onclick = (e) => {
+            if (e.target.classList.contains('modal-overlay')) {
+                e.target.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        };
+
+        // Mobile Menu Logic
+        function toggleMobileMenu() {
+            const overlay = document.getElementById('mobile-menu-overlay');
+            if(overlay) {
+                overlay.classList.toggle('active');
+                if(overlay.classList.contains('active')) {
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    document.body.style.overflow = 'auto';
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
