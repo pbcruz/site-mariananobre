@@ -8,6 +8,7 @@
     <meta name="description"
         content="Boutique de inteligência jurídica e financeira em São Paulo. Especialistas em recuperação de ativos, precatórios e direito público com foco em resultado.">
     <link rel="canonical" href="https://mariananobre.com.br/" />
+    <link rel="icon" type="image/png" href="imagens/logo.png">
     <!-- Open Graph / Redes Sociais -->
     <meta property="og:title" content="Mariana Nobre | Advocacia e Recuperação de Ativos em SP">
     <meta property="og:description"
@@ -39,7 +40,7 @@
         "addressRegion": "SP",
         "addressCountry": "BR"
       },
-      "telephone": "+5511963986278",
+      "telephone": "+55 11 96398-6278",
       "email": "mariana@mariananobre.com.br",
       "priceRange": "$$$",
       "sameAs": [
@@ -53,6 +54,7 @@
             --primary: #0d4250;
             --primary-light: #155b6b;
             --bg-dark: #0d4250;
+            --bg-deep: #082d36;
             --bg-medium: #111111;
             --bg-light: #f4f7f8;
             --text-main: #2c3e50;
@@ -69,7 +71,7 @@
         }
 
         body {
-            font-family: sans-serif;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             line-height: 1.6;
             color: var(--text-main);
             background-color: #ffffff;
@@ -95,7 +97,7 @@
             font-weight: 400;
             letter-spacing: 0.01em;
             margin-bottom: 1rem;
-            line-height: 1.25;
+            line-height: 1.3;
         }
 
         h1 {
@@ -140,6 +142,18 @@
             padding: 0 25px;
         }
 
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
         .btn {
             display: inline-block;
             padding: 16px 45px;
@@ -156,10 +170,20 @@
 
         .btn:hover {
             background-color: var(--accent);
-            color: #fff;
+            color: var(--bg-deep);
             border-color: var(--accent);
             transform: translateY(-2px);
             box-shadow: 0 10px 20px rgba(192, 158, 108, 0.25);
+        }
+
+        .btn:focus-visible,
+        .cookie-btn:focus-visible,
+        .close-mobile-menu:focus-visible,
+        a:focus-visible,
+        input:focus-visible,
+        textarea:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 3px;
         }
 
         .section-padding {
@@ -299,11 +323,12 @@
 
         /* HERO SECTION */
         .hero {
-            height: 100vh;
-            background-image: linear-gradient(rgba(13, 66, 80, 0.75), rgba(13, 66, 80, 0.4)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            min-height: 100vh;
+            min-height: 100dvh;
+            padding-top: 91px;
+            background-image: linear-gradient(rgba(13, 66, 80, 0.75), rgba(13, 66, 80, 0.4)), url('imagens/hero.jpg');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
             display: flex;
             align-items: center;
             color: #fff;
@@ -329,7 +354,7 @@
 
         .hero .btn:hover {
             background-color: var(--accent);
-            color: #fff;
+            color: var(--bg-deep);
             border-color: var(--accent);
             box-shadow: 0 10px 20px rgba(192, 158, 108, 0.4);
         }
@@ -347,13 +372,23 @@
             justify-content: center;
         }
 
-        .diff-item h3 {
+        .diff-item h3,
+        .diff-item h2 {
             font-size: 1.3rem;
             margin-bottom: 18px;
             color: #fff;
             border-left: 3px solid rgba(255, 255, 255, 0.3);
             padding-left: 20px;
             font-weight: 600;
+        }
+
+        .diff-item h2 {
+            text-transform: none;
+            letter-spacing: 0.01em;
+        }
+
+        .diff-item h2::after {
+            display: none;
         }
 
         .diff-item p {
@@ -522,6 +557,7 @@
             margin-bottom: 45px;
         }
 
+        .contact-info h3,
         .contact-info h4 {
             font-size: 0.8rem;
             text-transform: uppercase;
@@ -529,6 +565,11 @@
             margin-bottom: 12px;
             letter-spacing: 1.5px;
             font-weight: 700;
+        }
+
+        .contact-info h3::after,
+        .contact-info h4::after {
+            display: none;
         }
 
         .contact-info p {
@@ -546,10 +587,38 @@
             right: 0;
             background-color: var(--primary);
             color: #fff;
-            padding: 25px;
+            padding: 20px 25px;
             display: none;
             z-index: 9999;
             box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .cookie-content {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .cookie-text {
+            flex: 1;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            #cookie-banner {
+                padding: 16px 18px;
+            }
+
+            .cookie-content {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 12px;
+            }
+
+            .cookie-text {
+                font-size: 0.82rem;
+            }
         }
 
         .cookie-btn {
@@ -575,8 +644,8 @@
 
         /* FOOTER */
         footer {
-            background-color: #082d36;
-            color: rgba(255, 255, 255, 0.4);
+            background-color: var(--bg-deep);
+            color: rgba(255, 255, 255, 0.75);
             padding: 60px 0;
             text-align: center;
             font-size: 0.85rem;
@@ -585,6 +654,7 @@
         footer p {
             max-width: 100%;
             margin: 0 auto;
+            color: rgba(255, 255, 255, 0.75);
         }
 
         .footer-links {
@@ -592,12 +662,16 @@
         }
 
         .footer-links a {
-            color: rgba(255, 255, 255, 0.6);
+            color: rgba(255, 255, 255, 0.75);
             display: inline-block;
             padding: 12px 15px;
             margin: 0 5px;
             text-decoration: none;
             font-weight: 500;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
         }
 
         /* MODALS (PRIVACIDADE E SUCESSO) */
@@ -728,6 +802,7 @@
 
             h1 {
                 font-size: 2.2rem;
+                line-height: 1.3;
             }
 
             .team-card {
@@ -772,8 +847,7 @@
     <section class="hero">
         <div class="container hero-content fade-in">
             <h1>
-                <span class="sr-only">Advocacia Especializada em Recuperação de Ativos. </span>
-                Inteligência Jurídica.<br>Foco em Resultados.
+                Advocacia Especializada em Recuperação de Ativos. Inteligência Jurídica.<br>Foco em Resultados.
             </h1>
             <p>Aliamos a precisão técnica do Direito à visão estratégica financeira para maximizar a recuperação de
                 ativos.</p>
@@ -786,17 +860,17 @@
         <div class="container">
             <div class="diff-grid">
                 <div class="diff-item fade-in">
-                    <h3>Visão Financeira</h3>
+                    <h2>Visão Financeira</h2>
                     <p>Atuamos com a inteligência de fundos de investimento. Entendemos que o sucesso jurídico deve ser
                         acompanhado de liquidez e retorno financeiro real.</p>
                 </div>
                 <div class="diff-item fade-in">
-                    <h3>Engenharia Jurídica</h3>
+                    <h2>Engenharia Jurídica</h2>
                     <p>Atuamos no vácuo entre a advocacia de massa e as gestoras de ativos. Estruturamos operações
                         complexas com base técnica sólida e multidisciplinar.</p>
                 </div>
                 <div class="diff-item fade-in">
-                    <h3>Experiência de Mercado</h3>
+                    <h2>Experiência de Mercado</h2>
                     <p>Nossa equipe traz o DNA de grandes gestoras de ativos (Special Situations), traduzindo
                         complexidade jurídica em oportunidades de negócio.</p>
                 </div>
@@ -878,36 +952,39 @@
                     <h2>Entre em Contato</h2>
                     <p>Inicie um diálogo estratégico sobre o seu caso.</p>
 
-                    <form id="contact-form" name="contato" method="POST" data-netlify="true">
+                    <form id="contact-form" name="contato" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
                         <input type="hidden" name="form-name" value="contato" />
+                        <p class="sr-only" aria-hidden="true">
+                            <label>Não preencha este campo se for humano: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+                        </p>
                         <div class="form-group">
                             <label for="nome">Nome ou Empresa</label>
-                            <input type="text" id="nome" name="nome" required>
+                            <input type="text" id="nome" name="nome" required autocomplete="organization">
                         </div>
                         <div class="form-group">
                             <label for="email">E-mail Corporativo</label>
-                            <input type="email" id="email" name="email" required>
+                            <input type="email" id="email" name="email" required autocomplete="email">
                         </div>
                         <div class="form-group">
                             <label for="mensagem">Como podemos ajudar?</label>
-                            <textarea id="mensagem" name="mensagem" required></textarea>
+                            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
                         </div>
-                        <button type="submit" class="btn">Enviar Mensagem</button>
+                        <button type="submit" class="btn" id="submit-btn">Enviar Mensagem</button>
                     </form>
                 </div>
 
                 <div class="contact-info">
                     <div>
-                        <h4>Endereço</h4>
+                        <h3>Endereço</h3>
                         <p>São Paulo, SP</p>
                     </div>
                     <div>
-                        <h4>Atendimento</h4>
+                        <h3>Atendimento</h3>
                         <p><a href="mailto:mariana@mariananobre.com.br">mariana@mariananobre.com.br</a></p>
                     </div>
                     <div>
-                        <h4>WhatsApp</h4>
-                        <p>(11) 96398-6278</p>
+                        <h3>WhatsApp</h3>
+                        <p><a href="https://wa.me/5511963986278" rel="noopener">(11) 96398-6278</a></p>
                     </div>
                 </div>
             </div>
@@ -1003,6 +1080,23 @@
         </div>
     </div>
 
+    <!-- MODAL ERRO -->
+    <div id="error-modal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('error-modal')">&times;</span>
+            <h2>Não foi possível enviar</h2>
+            <div class="policy-text" style="color: #445566;">
+                <p style="font-size: 1.05rem; line-height: 1.6;">Sua mensagem pode não ter chegado. Para garantir o
+                    contato, fale direto com a gente:</p>
+                <p style="margin-top: 15px;">
+                    <a href="mailto:mariana@mariananobre.com.br" style="text-decoration: underline;">mariana@mariananobre.com.br</a><br>
+                    <a href="https://wa.me/5511963986278" rel="noopener" style="text-decoration: underline;">WhatsApp (11) 96398-6278</a>
+                </p>
+                <button class="btn" onclick="closeModal('error-modal')" style="margin-top: 20px;">Fechar</button>
+            </div>
+        </div>
+    </div>
+
     <script>
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -1039,36 +1133,52 @@
         });
 
         const contactForm = document.getElementById('contact-form');
+        const submitBtn = document.getElementById('submit-btn');
         if (contactForm) {
             contactForm.addEventListener('submit', (e) => {
                 e.preventDefault();
                 const formData = new FormData(contactForm);
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Enviando...';
                 fetch("/", {
                     method: "POST",
                     headers: { "Content-Type": "application/x-www-form-urlencoded" },
                     body: new URLSearchParams(formData).toString(),
                 })
-                    .then(() => {
+                    .then((res) => {
+                        if (!res.ok) {
+                            throw new Error('Falha no envio (HTTP ' + res.status + ')');
+                        }
                         // Limpa o formulário e abre o modal de sucesso
                         contactForm.reset();
                         openModal('success-modal');
                     })
                     .catch(() => {
-                        alert("Ocorreu um erro. Por favor, tente novamente.");
+                        // Preserva o texto digitado e oferece canais alternativos
+                        openModal('error-modal');
+                    })
+                    .finally(() => {
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = 'Enviar Mensagem';
                     });
             });
         }
 
         const banner = document.getElementById('cookie-banner');
-        if (!localStorage.getItem('mn-lgpd-accept')) {
+        if (!localStorage.getItem('mn-lgpd-accept') && !localStorage.getItem('mn-lgpd-reject')) {
             setTimeout(() => banner.style.display = 'block', 1500);
         }
-        function fecharBanner() {
+        function aceitarCookies() {
             localStorage.setItem('mn-lgpd-accept', 'true');
             banner.style.display = 'none';
         }
-        document.getElementById('accept-cookies').onclick = fecharBanner;
-        document.getElementById('reject-cookies').onclick = fecharBanner;
+        function rejeitarCookies() {
+            // Nenhum consentimento é gravado nem lido: o site só usa cookies essenciais.
+            localStorage.setItem('mn-lgpd-reject', 'true');
+            banner.style.display = 'none';
+        }
+        document.getElementById('accept-cookies').onclick = aceitarCookies;
+        document.getElementById('reject-cookies').onclick = rejeitarCookies;
 
         // Modal Logic Genérico para Múltiplos Modais
         function openModal(modalId) {
@@ -1093,6 +1203,20 @@
                 document.body.style.overflow = 'auto';
             }
         };
+
+        // ESC fecha modal e menu mobile
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.modal-overlay').forEach((m) => {
+                    m.style.display = 'none';
+                });
+                document.body.style.overflow = 'auto';
+                const overlay = document.getElementById('mobile-menu-overlay');
+                if (overlay && overlay.classList.contains('active')) {
+                    toggleMobileMenu();
+                }
+            }
+        });
 
         // Mobile Menu Logic
         function toggleMobileMenu() {
