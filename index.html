@@ -177,7 +177,6 @@
         }
 
         .btn:focus-visible,
-        .cookie-btn:focus-visible,
         .close-mobile-menu:focus-visible,
         a:focus-visible,
         input:focus-visible,
@@ -579,69 +578,6 @@
             font-weight: 300;
         }
 
-        /* LGPD BANNER */
-        #cookie-banner {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background-color: var(--primary);
-            color: #fff;
-            padding: 20px 25px;
-            display: none;
-            z-index: 9999;
-            box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .cookie-content {
-            display: flex;
-            align-items: center;
-            gap: 25px;
-        }
-
-        .cookie-text {
-            flex: 1;
-            font-size: 0.9rem;
-            line-height: 1.5;
-        }
-
-        @media (max-width: 768px) {
-            #cookie-banner {
-                padding: 16px 18px;
-            }
-
-            .cookie-content {
-                flex-direction: column;
-                align-items: stretch;
-                gap: 12px;
-            }
-
-            .cookie-text {
-                font-size: 0.82rem;
-            }
-        }
-
-        .cookie-btn {
-            padding: 12px 35px;
-            background-color: #fff;
-            color: var(--primary);
-            border: none;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            cursor: pointer;
-            font-weight: 700;
-            transition: 0.3s;
-        }
-        .cookie-btn-outline {
-            background-color: transparent;
-            color: #fff;
-            border: 1px solid rgba(255,255,255,.5);
-        }
-        .cookie-btn-outline:hover {
-            background-color: rgba(255,255,255,.1);
-            border-color: #fff;
-        }
-
         /* FOOTER */
         footer {
             background-color: var(--bg-deep);
@@ -1007,20 +943,6 @@
         </div>
     </footer>
 
-    <!-- BANNER LGPD -->
-    <div id="cookie-banner">
-        <div class="cookie-content">
-            <div class="cookie-text">
-                Valorizamos sua privacidade. Este site utiliza apenas cookies essenciais para o seu funcionamento e não coleta dados para publicidade ou rastreamento.
-                Saiba mais em nossa <a onclick="openModal('privacy-modal')"
-                    style="cursor: pointer; text-decoration: underline; color: #fff;">Política de Privacidade</a>.
-            </div>
-            <div style="display:flex; gap:10px; flex-wrap:wrap;">
-                <button id="reject-cookies" class="cookie-btn cookie-btn-outline">Rejeitar</button>
-                <button id="accept-cookies" class="cookie-btn">Concordar</button>
-            </div>
-        </div>
-    </div>
 
     <!-- MOBILE MENU OVERLAY -->
     <div id="mobile-menu-overlay" class="mobile-menu-overlay">
@@ -1163,22 +1085,6 @@
                     });
             });
         }
-
-        const banner = document.getElementById('cookie-banner');
-        if (!localStorage.getItem('mn-lgpd-accept') && !localStorage.getItem('mn-lgpd-reject')) {
-            setTimeout(() => banner.style.display = 'block', 1500);
-        }
-        function aceitarCookies() {
-            localStorage.setItem('mn-lgpd-accept', 'true');
-            banner.style.display = 'none';
-        }
-        function rejeitarCookies() {
-            // Nenhum consentimento é gravado nem lido: o site só usa cookies essenciais.
-            localStorage.setItem('mn-lgpd-reject', 'true');
-            banner.style.display = 'none';
-        }
-        document.getElementById('accept-cookies').onclick = aceitarCookies;
-        document.getElementById('reject-cookies').onclick = rejeitarCookies;
 
         // Modal Logic Genérico para Múltiplos Modais
         function openModal(modalId) {
