@@ -552,11 +552,11 @@ function renderQueue() {
         const detailEl = document.getElementById('detail-' + tid);
         if (!detailEl) return;
         if (td.status === 'done' && td.result) {
-            detailEl.innerHTML = renderTaskResult(td);
+            detailEl.innerHTML = renderTaskResult(td, tid);
         } else if (td.status === 'error') {
             detailEl.innerHTML = `<div class="task-error-msg"><strong>Erro:</strong> ${esc(td.error || 'Desconhecido')}</div>`;
         } else if (td.result) {
-            detailEl.innerHTML = renderTaskResult(td);
+            detailEl.innerHTML = renderTaskResult(td, tid);
         }
     });
 
@@ -665,7 +665,7 @@ async function fetchResult(tid) {
 }
 
 // --- TASK RESULT RENDERING ---
-function renderTaskResult(td) {
+function renderTaskResult(td, tid) {
     const meta = td.result?.metadata || {};
     const audit = td.result?.audit || {};
     const dadosProc = audit.dados_processo || {};
@@ -680,6 +680,8 @@ function renderTaskResult(td) {
     return `
         <div class="task-card-actions">
             <button class="btn btn-small btn-accent" onclick="event.stopPropagation();downloadTaskResult('${td.result?.metadata?.arquivo_origem || 'resultado'}', this)">Baixar JSON</button>
+            <button class="btn btn-small btn-outline" onclick="event.stopPropagation();downloadRelatorio('${tid || ''}','xlsx','${td.result?.metadata?.arquivo_origem || 'resultado'}', this)">Baixar Excel</button>
+            <button class="btn btn-small btn-outline" onclick="event.stopPropagation();downloadRelatorio('${tid || ''}','docx','${td.result?.metadata?.arquivo_origem || 'resultado'}', this)">Baixar Word</button>
             <button class="btn btn-small btn-outline" onclick="event.stopPropagation();copyTaskJson(this)">Copiar JSON</button>
         </div>
         <div class="task-result-grid">
@@ -718,6 +720,38 @@ function downloadTaskResult(filename, btn) {
     a.href = url;
     a.download = `MN_Auditoria_${filename.replace(/\.pdf$/i,'')}.json`;
     a.click(); URL.revokeObjectURL(url);
+}
+
+async function downloadRelatorio(tid, formato, arquivoOrigem, btn) {
+    if (!tid) return;
+    const original = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = 'Gerando…';
+    try {
+        const res = await fetch(`${API_BASE}/api/relatorio/${tid}/${formato}`, {
+            headers: { 'Authorization': `Bearer ${authToken}` }
+        });
+        if (!res.ok) {
+            let detalhe = res.statusText;
+            try { detalhe = (await res.json()).detail || detalhe; } catch (e) { /* corpo não-JSON */ }
+            throw new Error(detalhe);
+        }
+        const blob = await res.blob();
+        const nome = `${(arquivoOrigem || 'relatorio').replace(/\.pdf$/i, '')}.${formato}`;
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = nome;
+        a.click();
+        URL.revokeObjectURL(url);
+        btn.textContent = 'Pronto';
+        setTimeout(() => { btn.textContent = original; btn.disabled = false; }, 1200);
+        return;
+    } catch (e) {
+        alert('Não foi possível gerar o arquivo: ' + e.message);
+        btn.textContent = original;
+        btn.disabled = false;
+    }
 }
 
 function copyTaskJson(btn) {
