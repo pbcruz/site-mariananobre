@@ -672,8 +672,6 @@ function renderTaskResult(td, tid) {
     const partes = audit.partes || {};
     const tl = audit.linha_do_tempo || [];
     const mats = audit.bens_penhorados?.imoveis || [];
-    const custoUsd = meta.custo_real_usd;
-    const custoBrl = meta.custo_real_brl;
 
     const rawJson = JSON.stringify(td.result, null, 2);
 
@@ -690,7 +688,6 @@ function renderTaskResult(td, tid) {
                 ${arow('Documento', meta.arquivo_origem||'-')}
                 ${arow('Páginas', meta.total_paginas||'-')}
                 ${arow('Método', meta.metodo_extracao === 'texto_nativo' ? 'Nativa' : 'Híbrida (OCR)')}
-                ${custoUsd != null ? arow('Custo', `US$ ${custoUsd.toFixed(6)} ≈ R$ ${(custoBrl || custoUsd * 5.0).toFixed(4)}`) : ''}
             </div>
             <div class="task-result-card">
                 <h4>Extração</h4>
